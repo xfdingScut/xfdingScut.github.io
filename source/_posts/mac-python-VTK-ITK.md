@@ -2,8 +2,8 @@
 title: mac-python-VTK-ITK
 toc: true
 date: 2018-09-10 16:20:28
-tags:VTK,ITK
-categories:配置教程
+tags: [VTK, ITK]
+categories: 配置教程
 ---
 
 # VTK

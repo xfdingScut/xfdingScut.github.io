@@ -1,7 +1,9 @@
 ---
 title: Mac搭建Hexo+Github Page个人博客
+toc: true
 date: 2018-09-06 16:40:40
-tags:
+tags: [Hexo, Homebrew] 
+categories: 配置教程
 ---
 
 # 安装Homebrew
