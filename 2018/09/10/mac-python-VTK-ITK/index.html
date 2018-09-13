@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="这是小芳的博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="标签">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="小芳的博客">
 <meta property="og:description" content="这是小芳的博客">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-06T08:16:02.173Z">
+<meta property="og:updated_time" content="2018-09-06T08:16:22.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="标签">
 <meta name="twitter:description" content="这是小芳的博客">
 
 
@@ -78,9 +78,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="笔试"> 笔试 </li>
-    
     <li data-rel="配置教程"> 配置教程 </li>
+    
+    <li data-rel="笔试"> 笔试 </li>
     
 </ul>
 <div class="left-bottom">
@@ -125,11 +125,11 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">欢聚时代</a>
+        <a href="javascript:" class="color5">Hexo</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">笔试，CV</a>
+        <a href="javascript:" class="color4">Homebrew</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -141,11 +141,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">Hexo</a>
+        <a href="javascript:" class="color5">欢聚时代</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">Homebrew</a>
+        <a href="javascript:" class="color1">笔试，CV</a>
     </li>
     
     <div class="clearfix"></div>
@@ -154,12 +154,12 @@
     
     <nav id="title-list-nav">
         
-        <a  class="笔试 "
-           href="/2018/09/13/欢聚时代—视觉/"
-           data-tag="欢聚时代,笔试，CV"
+        <a  class="配置教程 "
+           href="/2018/09/06/Mac搭建Hexo-Github-Page个人博客/"
+           data-tag="Hexo,Homebrew"
            data-author="" >
-            <span class="post-title" title="欢聚时代—视觉">欢聚时代—视觉</span>
-            <span class="post-date" title="2018-09-13 14:49:17">2018/09/13</span>
+            <span class="post-title" title="Mac搭建Hexo+Github Page个人博客">Mac搭建Hexo+Github Page个人博客</span>
+            <span class="post-date" title="2018-09-06 16:40:40">2018/09/06</span>
         </a>
         
         <a  class="配置教程 "
@@ -170,12 +170,12 @@
             <span class="post-date" title="2018-09-10 16:20:28">2018/09/10</span>
         </a>
         
-        <a  class="配置教程 "
-           href="/2018/09/06/Mac搭建Hexo-Github-Page个人博客/"
-           data-tag="Hexo,Homebrew"
+        <a  class="笔试 "
+           href="/2018/09/13/欢聚时代—视觉/"
+           data-tag="欢聚时代,笔试，CV"
            data-author="" >
-            <span class="post-title" title="Mac搭建Hexo+Github Page个人博客">Mac搭建Hexo+Github Page个人博客</span>
-            <span class="post-date" title="2018-09-06 16:40:40">2018/09/06</span>
+            <span class="post-title" title="欢聚时代—视觉">欢聚时代—视觉</span>
+            <span class="post-date" title="2018-09-13 14:49:17">2018/09/13</span>
         </a>
         
     </nav>
@@ -291,6 +291,46 @@ import SimpleITK as sitk
 
 
     
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
 
     </div>
     <div class="copyright">
@@ -323,7 +363,7 @@ import SimpleITK as sitk
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#欢聚时代','#笔试，CV','#VTK','#ITK','#Hexo','#Homebrew',],
+            'data': ['#Hexo','#Homebrew','#VTK','#ITK','#欢聚时代','#笔试，CV',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
