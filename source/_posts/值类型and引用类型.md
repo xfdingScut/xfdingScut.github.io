@@ -3,7 +3,7 @@ title: 值类型&引用类型
 toc: true
 date: 2018-09-14 11:24:22
 tags: [数据结构,值&引用]
-categories: 数据结构与算法
+categories: 数据结构
 ---
 
 # 值类型与引用类型的区别

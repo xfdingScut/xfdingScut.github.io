@@ -3,7 +3,7 @@ title: leetcode问题整理
 toc: true
 date: 2018-09-14 21:00:24
 tags: [leetcode]
-categories: LeetCsuxode
+categories: LeetCode
 ---
 
 |  题目类型  | 题目编号 |                    题目名称                    |                           题目描述                           | 题目链接                                                     |                           思路讲解                           |
