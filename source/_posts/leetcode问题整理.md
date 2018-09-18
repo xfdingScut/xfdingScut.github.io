@@ -1,3 +1,11 @@
+---
+title: leetcode问题整理
+toc: true
+date: 2018-09-14 21:00:24
+tags: [leetcode]
+categories: LeetCsuxode
+---
+
 |  题目类型  | 题目编号 |                    题目名称                    |                           题目描述                           | 题目链接                                                     |                           思路讲解                           |
 | :--------: | :------: | :--------------------------------------------: | :----------------------------------------------------------: | ------------------------------------------------------------ | :----------------------------------------------------------: |
 |  **数组**  |    1     |                    Two Sum                     |            给定数组，返回数组中相加和为n的两个数             | [LeetCode]()                                                 |                          用字典解决                          |
@@ -27,12 +35,12 @@
 |            |   344    |                 Reverse String                 |                          反转字符串                          | [LeetCode]()                                                 |                                                              |
 |            |   345    |           Reverse Vowels of a String           |                      反转字符串中的元音                      | [LeetCode]()                                                 |                     元音["a,e,i,o,u"]，                      |
 |            |   383    |                  Ransom Note                   |                     判断字符串出现的次数                     | [LeetCode]()                                                 |                             字典                             |
-|            |   434    |         Number of Segments in a String         |                      统计字符串单词个数                      | [LeetCode]()                                                 |                                                              |
-|            |   520    |                 Detect Capital                 |                                                              | [LeetCode]()                                                 |                                                              |
-|            |   521    |         Longest Uncommon Subsequence I         |                                                              | [LeetCode]()                                                 |                                                              |
-|            |   541    |               Reverse String II                |                                                              | [LeetCode]()                                                 |                                                              |
-|            |   551    |          Student Attendance Record I           |                                                              | [LeetCode]()                                                 |                                                              |
-|            |   557    |         Reverse Words in a String III          |                                                              | [LeetCode]()                                                 |                                                              |
+|            |   434    |         Number of Segments in a String         |                      统计字符串单词个数                      | [LeetCode]()                                                 |        split()根据空格将字符串分成字符串组数计算长度         |
+|            |   520    |                 Detect Capital                 |                      检测大小写是否合法                      | [LeetCode]()                                                 | issupper():全部大写<br />islower:全部小写<br />istitle:首字母大写其他小写 |
+|            |   521    |         Longest Uncommon Subsequence I         |                       最长非共同子序列                       | [LeetCode]()                                                 |   字符串相等：输出none<br />字符串不等：输出长度长的那一个   |
+|            |   541    |               Reverse String II                |                      根据k，反转字符串                       | [LeetCode]()                                                 |                        python大法好呀                        |
+|            |   551    |          Student Attendance Record I           |          判断字符串中是否有两个以上A或者三个连续的L          | [LeetCode]()                                                 |                          正则表达式                          |
+|            |   557    |         Reverse Words in a String III          |                    反转字符串中的每个单词                    | [LeetCode]()                                                 |                        python大法好呀                        |
 |            |   657    |               Judge Route Circle               |                                                              | [LeetCode]()                                                 |                                                              |
 |            |    3     | Longest Substring Without Repeating Characters |                                                              | [LeetCode]()                                                 |                                                              |
 |            |    5     |         Longest Palindromic Substring          |                                                              | [LeetCode]()                                                 |                                                              |
