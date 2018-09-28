@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>标签 | 小芳的博客</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="标签 | 小芳的博客">
+  <title>SQL基础知识 | 小芳的博客</title>
+  <meta name="keywords" content=" SQL ">
+  <meta name="description" content="SQL基础知识 | 小芳的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="这是小芳的博客">
 <meta property="og:type" content="website">
@@ -290,24 +290,36 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-SQL基础知识" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">标签</h1>
+        <h1 class="article-title">SQL基础知识</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+            <a href="javascript:" data-rel="数据库">数据库</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">SQL</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-06 16:16:22'>2018-09-06 16:15</time>
+        创建时间:<time class="date" title='更新时间: 2018-09-28 16:53:42'>2018-09-28 16:51</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:944</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -326,7 +338,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL命令分类"><span class="toc-text">SQL命令分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DDL"><span class="toc-text">DDL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建表"><span class="toc-text">创建表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改表"><span class="toc-text">修改表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除表"><span class="toc-text">删除表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#完整性约束"><span class="toc-text">完整性约束</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#主键约束"><span class="toc-text">主键约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#唯一性约束"><span class="toc-text">唯一性约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#外键约束"><span class="toc-text">外键约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NOT-NULL约束"><span class="toc-text">NOT NULL约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检查约束"><span class="toc-text">检查约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#去除约束"><span class="toc-text">去除约束</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DML"><span class="toc-text">DML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#插入行"><span class="toc-text">插入行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入数据到指定列"><span class="toc-text">插入数据到指定列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从另一个表插入数据"><span class="toc-text">从另一个表插入数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入NULL值"><span class="toc-text">插入NULL值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新现有数据"><span class="toc-text">更新现有数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除数据"><span class="toc-text">删除数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事务控制"><span class="toc-text">事务控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#COMMIT"><span class="toc-text">COMMIT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ROLLBACK"><span class="toc-text">ROLLBACK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SAVEPOINT"><span class="toc-text">SAVEPOINT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ROLLBACK-TO-SAVEPOINT"><span class="toc-text">ROLLBACK TO SAVEPOINT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RELEASE-SAVEPOINT"><span class="toc-text">RELEASE SAVEPOINT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SET-TRANSACTION"><span class="toc-text">SET TRANSACTION</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DQL"><span class="toc-text">DQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#删除重复记录"><span class="toc-text">删除重复记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出结果排序"><span class="toc-text">输出结果排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出结果分组"><span class="toc-text">输出结果分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#统计表里的记录数量"><span class="toc-text">统计表里的记录数量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用字段别名"><span class="toc-text">使用字段别名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#逻辑操作符"><span class="toc-text">逻辑操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IS-NULL"><span class="toc-text">IS NULL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BETWEEN"><span class="toc-text">BETWEEN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IN"><span class="toc-text">IN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LIKE"><span class="toc-text">LIKE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EXISTS"><span class="toc-text">EXISTS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UNIQUE"><span class="toc-text">UNIQUE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ALL-SOME-ANY"><span class="toc-text">ALL / SOME(ANY)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AND-OR"><span class="toc-text">AND / OR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NOT求反操作符"><span class="toc-text">NOT求反操作符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#汇总函数"><span class="toc-text">汇总函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#汇总函数与分组函数结合"><span class="toc-text">汇总函数与分组函数结合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CUBE-AND-ROLLUP"><span class="toc-text">CUBE AND ROLLUP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HAVING"><span class="toc-text">HAVING</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -341,13 +353,216 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="SQL命令分类"><a href="#SQL命令分类" class="headerlink" title="SQL命令分类"></a>SQL命令分类</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">语言类型</th>
+<th style="text-align:center">基础命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">数据定义语言DDL</td>
+<td style="text-align:center">CREATE（TABLE、INDEX、VIEW）、ALTER（TABLE、INDEX）、DROP（TABLE、INDEX、VIEW）</td>
+</tr>
+<tr>
+<td style="text-align:center">数据操作语言DML</td>
+<td style="text-align:center">INSERT、UPDATE、DELETE</td>
+</tr>
+<tr>
+<td style="text-align:center">数据查询语言DQL</td>
+<td style="text-align:center">SELECT</td>
+</tr>
+<tr>
+<td style="text-align:center">数据控制语言DCL</td>
+<td style="text-align:center">ALTER PASSWORD、GRANT、REVOKE、CREATE SYNONYM</td>
+</tr>
+<tr>
+<td style="text-align:center">数据管理命令</td>
+<td style="text-align:center">START AUDIT、STOP AUDIT</td>
+</tr>
+<tr>
+<td style="text-align:center">事务控制命令</td>
+<td style="text-align:center">COMMIT、ROLLBACK、SAVEPOINT、SET TRANSACTION</td>
+</tr>
+</tbody>
+</table>
+<h1 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h1><h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><pre><code class="SQL">CREATE TABLE STUDENT_TBL
+(
+STUD_ID CHAR(9) NOT NULL,
+STUD_NAME VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE STUDENT_BACKUP_TBL AS
+SELECT * FROM STUDENT_TBL;
+</code></pre>
+<h2 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h2><pre><code class="SQL">ALTER TABLE STUDENT_TBL MODIFY
+STUD_ID CHAR(10);
+</code></pre>
+<h2 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h2><pre><code class="SQL">DROP TABLE STUDENT_TBL;
+</code></pre>
+<h1 id="完整性约束"><a href="#完整性约束" class="headerlink" title="完整性约束"></a>完整性约束</h1><h2 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h2><pre><code class="SQL">CREATE TABLE STUDENT_TBL
+(
+STUD_ID CHAR(9) NOT NULL PRIMAARY KEY,
+STUD_NAME VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE STUDENT_TBL
+(
+STUD_ID CHAR(9) NOT NULL,
+STUD_NAME VARCHAR(40) NOT NULL,
+PRIMARY KEY(STUD_ID, STUD_NAME)
+);
+
+ALTER TABLE STUDENT_TBL
+ADD CONSTRAINT STUD_PK PRIMARY KEY(STUD_ID, STUD_NAME);
+</code></pre>
+<h2 id="唯一性约束"><a href="#唯一性约束" class="headerlink" title="唯一性约束"></a>唯一性约束</h2><pre><code class="SQL">CREATE TABLE STUDENT_TBL
+(
+STUD_ID CHAR(9) NOT NULL PRIMAARY KEY,
+STUD_NAME VARCHAR(40) NOT NULL UNIQUE
+);
+</code></pre>
+<h2 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h2><pre><code class="SQL">CREATE TABLE STUDENT_SCORE_TBL
+(
+STUD_ID CHAR(9) NOT NULL,
+ENGLISH INT,
+CONSTRAINT STUD_ID_FK FOREIGN KEY (STUD_ID) REFERENCES STUDENT_TBL (STUD_ID)
+);
+</code></pre>
+<h2 id="NOT-NULL约束"><a href="#NOT-NULL约束" class="headerlink" title="NOT NULL约束"></a>NOT NULL约束</h2><h2 id="检查约束"><a href="#检查约束" class="headerlink" title="检查约束"></a>检查约束</h2><pre><code class="SQL">CREATE TABLE STUDENT_SCORE_TBL
+(
+STUD_ID CHAR(9) NOT NULL,
+ENGLISH INT,
+CONSTRAINT ENGLISH_CHK CHECK ( 0 &lt;= ENGLISH &lt;= 100)
+); 
+</code></pre>
+<h2 id="去除约束"><a href="#去除约束" class="headerlink" title="去除约束"></a>去除约束</h2><pre><code class="SQL">ALTER TABLE  STUDENT_SCORE_TBL DROP CONSTRAINT ENGLISH_CHK;
+</code></pre>
+<h1 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h1><h2 id="插入行"><a href="#插入行" class="headerlink" title="插入行"></a>插入行</h2><pre><code class="SQL">INSERT INTO STUDENT_TBL
+VALUES(&#39;001&#39;, &#39;LEE&#39;);
+</code></pre>
+<h2 id="插入数据到指定列"><a href="#插入数据到指定列" class="headerlink" title="插入数据到指定列"></a>插入数据到指定列</h2><pre><code class="SQL">INSERT INTO STUDENT_SCORE_TBL(STUD_ID,ENGLISH)
+VALUES(&#39;001&#39;, 90);
+</code></pre>
+<h2 id="从另一个表插入数据"><a href="#从另一个表插入数据" class="headerlink" title="从另一个表插入数据"></a>从另一个表插入数据</h2><pre><code class="SQL">INSERT INTO STUDENT_BACKUP_TBL(STUD_ID,STUD_NAME)
+SELECT * FROM STUDENT_TBL;
+</code></pre>
+<h2 id="插入NULL值"><a href="#插入NULL值" class="headerlink" title="插入NULL值"></a>插入NULL值</h2><pre><code class="SQL">INSERT INTO STUDENT_SCORE_TBL
+(&#39;001&#39;,NULL);
+</code></pre>
+<h2 id="更新现有数据"><a href="#更新现有数据" class="headerlink" title="更新现有数据"></a>更新现有数据</h2><pre><code class="SQL">UPDATE STUDENT_SCORE_TBL
+SET SCORE = 90
+WHERE STUD_ID = &#39;001&#39;;
+</code></pre>
+<h2 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h2><pre><code class="SQL">DELETE FROM STUDENT_TBL
+WHERE STUD_ID = &#39;001&#39;
+</code></pre>
+<h1 id="事务控制"><a href="#事务控制" class="headerlink" title="事务控制"></a>事务控制</h1><h2 id="COMMIT"><a href="#COMMIT" class="headerlink" title="COMMIT"></a>COMMIT</h2><p>提交上一次COMMIT或ROllBACK之后的全部事务</p>
+<h2 id="ROLLBACK"><a href="#ROLLBACK" class="headerlink" title="ROLLBACK"></a>ROLLBACK</h2><p>撤销上一次COMMIT或ROllBACK之后的全部事务</p>
+<h2 id="SAVEPOINT"><a href="#SAVEPOINT" class="headerlink" title="SAVEPOINT"></a>SAVEPOINT</h2><p>保存点是事务过程中的一个逻辑点，我们可以将事务回退到这个点，而不必撤回全部事务。</p>
+<h2 id="ROLLBACK-TO-SAVEPOINT"><a href="#ROLLBACK-TO-SAVEPOINT" class="headerlink" title="ROLLBACK TO SAVEPOINT"></a>ROLLBACK TO SAVEPOINT</h2><p>将事务撤回保存点</p>
+<h2 id="RELEASE-SAVEPOINT"><a href="#RELEASE-SAVEPOINT" class="headerlink" title="RELEASE SAVEPOINT"></a>RELEASE SAVEPOINT</h2><p>删除创建的保存点</p>
+<pre><code class="SQL">DELETE FROM STUDENT_TBL
+WHERE STUD_ID = &#39;003&#39;
+SAVEPOINT SP1
+DELETE FROM STUDENT_TBL
+WHERE STUD_ID = &#39;002&#39;
+SAVEPOINT SP2
+DELETE FROM STUDENT_TBL
+WHERE STUD_ID = &#39;001&#39;
+ROLLBACK TO SP2
+RELEASE SP1
+</code></pre>
+<h2 id="SET-TRANSACTION"><a href="#SET-TRANSACTION" class="headerlink" title="SET TRANSACTION"></a>SET TRANSACTION</h2><p>用于初始化数据库事务，指定事务的特性。</p>
+<h1 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h1><h2 id="删除重复记录"><a href="#删除重复记录" class="headerlink" title="删除重复记录"></a>删除重复记录</h2><p>DISTINCT用于去除结果中的重复记录。</p>
+<pre><code class="SQL">SELECT DISTINCT(STUD_NAME) FROM STUDENT_TBL
+</code></pre>
+<h2 id="输出结果排序"><a href="#输出结果排序" class="headerlink" title="输出结果排序"></a>输出结果排序</h2><p>ASC/DESC: 生序/降序</p>
+<pre><code class="SQL">SELECT * FROM STUDENT_SCORE_TBL
+WHERE ENGLISH &gt;= 60
+ORDER BY ENGLISH DESC;
+</code></pre>
+<h2 id="输出结果分组"><a href="#输出结果分组" class="headerlink" title="输出结果分组"></a>输出结果分组</h2><pre><code class="SQL">SELECT * FROM STUDENT_SCORE_TBL
+WHERE ENGLISH &gt;= 60
+GROUP BY ENGLISH;
+</code></pre>
+<h2 id="统计表里的记录数量"><a href="#统计表里的记录数量" class="headerlink" title="统计表里的记录数量"></a>统计表里的记录数量</h2><pre><code class="SQL">SELECT COUNT(*) FROM STUDENT_SCORE_TBL
+WHERE ENGLISH &gt;= 60;
+</code></pre>
+<h2 id="使用字段别名"><a href="#使用字段别名" class="headerlink" title="使用字段别名"></a>使用字段别名</h2><pre><code class="SQL">SELECT STUD_NAME NAME FROM STUDENT_TBL;
+</code></pre>
+<h1 id="逻辑操作符"><a href="#逻辑操作符" class="headerlink" title="逻辑操作符"></a>逻辑操作符</h1><h2 id="IS-NULL"><a href="#IS-NULL" class="headerlink" title="IS NULL"></a>IS NULL</h2><pre><code class="SQL">SELECT COUNT(*) FROM STUDENT_SCORE_TBL
+WHERE ENGLISH IS NULL;
+</code></pre>
+<h2 id="BETWEEN"><a href="#BETWEEN" class="headerlink" title="BETWEEN"></a>BETWEEN</h2><pre><code class="SQL">SELECT COUNT(*) FROM STUDENT_SCORE_TBL
+WHERE ENGLISH BETWEEN 60 AND 80;
+</code></pre>
+<h2 id="IN"><a href="#IN" class="headerlink" title="IN"></a>IN</h2><pre><code class="SQL">SELECT COUNT(*) FROM STUDENT_SCORE_TBL
+WHERE STUD_ID IN (&#39;001&#39;,&#39;002&#39;);
+</code></pre>
+<h2 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h2><p>利用通配符把一个值与类似的值做比较，通配符有：</p>
+<p>%： 代表零个，一个，或多个字符</p>
+<p>_： 代表一个数字或一个字符</p>
+<pre><code class="SQL">SELECT * FROM STUDENT_SCORE_TBL
+WHERE STUD_ID LIKE &#39;00_&#39;
+</code></pre>
+<h2 id="EXISTS"><a href="#EXISTS" class="headerlink" title="EXISTS"></a>EXISTS</h2><pre><code class="SQL">SELECT STUD_ID FROM STUDENT_SCORE_TBL
+WHERE EXISTS
+(
+SELECT * FROM STUDENT_SCORE_TBL
+WHERE ENGLISH &gt;= 60
+);
+</code></pre>
+<h2 id="UNIQUE"><a href="#UNIQUE" class="headerlink" title="UNIQUE"></a>UNIQUE</h2><h2 id="ALL-SOME-ANY"><a href="#ALL-SOME-ANY" class="headerlink" title="ALL / SOME(ANY)"></a>ALL / SOME(ANY)</h2><pre><code class="SQL">SELECT STUD_ID FROM STUDENT_SCORE_TBL
+WHERE ENGLISH &gt; ALL
+(
+SELECT * FROM STUDENT_SCORE_TBL
+WHERE ENGLISH BETWEEN 50 AND 70
+);
+</code></pre>
+<h2 id="AND-OR"><a href="#AND-OR" class="headerlink" title="AND / OR"></a>AND / OR</h2><h2 id="NOT求反操作符"><a href="#NOT求反操作符" class="headerlink" title="NOT求反操作符"></a>NOT求反操作符</h2><h1 id="汇总函数"><a href="#汇总函数" class="headerlink" title="汇总函数"></a>汇总函数</h1><ol>
+<li>COUNT</li>
+<li>SUM</li>
+<li>MAX</li>
+<li>MIN</li>
+<li>AVG</li>
+</ol>
+<h2 id="汇总函数与分组函数结合"><a href="#汇总函数与分组函数结合" class="headerlink" title="汇总函数与分组函数结合"></a>汇总函数与分组函数结合</h2><pre><code class="SQL">SELECT SUM(ENGLISH) FROM STUDENT_SCORE_TBL
+WHERE ENGLISH &gt;= 0
+GROUP BY ENGLISH
+</code></pre>
+<p><strong>注意：SELECT语句里出现的所有字段，出去汇总字段，都必须出现在GROUP BY里面</strong></p>
+<h2 id="CUBE-AND-ROLLUP"><a href="#CUBE-AND-ROLLUP" class="headerlink" title="CUBE AND ROLLUP"></a>CUBE AND ROLLUP</h2><p>ROLLUP可以在全部分组的基础上，对其中一小部分进行汇总。</p>
+<pre><code class="SQL">SELECT AVG(AGE) FROM STUDENT_TBL
+GROUP BY ROLLUP(STUD_CITY,STUD_GENDER)
+</code></pre>
+<p><strong>ROLLUP</strong>按照从右至左的顺序，每次去掉括号里的最后一个字段，并根据剩余的字段进行分组统计，将结果插入返回表，最后，还对全表进行了一次分组统计。</p>
+<p><strong>CUBE</strong>对分组中的所有字段进行排列组合，根据每一种组合分别进行统计汇总。最后，再对全表进行统计汇总。</p>
+<h2 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h2><p>跟在GROUP BY之后，ORDER BY之前使用，用于筛选分组结果中满足条件的分组。</p>
+<pre><code class="SQL">SELECT AVG(AGE) FROM STUDENT_TBL
+GROUP BY ROLLUP(STUD_CITY)
+HAVING AVG(AGE) &gt;= 20
+</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
 </article>
 
 
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>SQL基础知识</p>
+    <p><span>文章字数:</span><span class="post-count">944</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="xiaofang">xiaofang</a></p>
+    <p><span>发布时间:</span>2018-09-28, 16:51:30</p>
+    <p><span>最后更新:</span>2018-09-28, 16:53:42</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/09/28/SQL基础知识/" title="SQL基础知识">http://yoursite.com/2018/09/28/SQL基础知识/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
