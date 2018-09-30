@@ -3,7 +3,7 @@ title: SQL基础知识
 toc: true
 date: 2018-09-28 16:51:30
 tags: [SQL]
-categories: [数据库]
+categories: [程序语言]
 ---
 
 # SQL命令分类
@@ -16,7 +16,8 @@ categories: [数据库]
 |  数据管理命令   |                   START AUDIT、STOP AUDIT                    |
 |  事务控制命令   |         COMMIT、ROLLBACK、SAVEPOINT、SET TRANSACTION         |
 # DDL
-## 创建表
+1. 创建表
+
 ```SQL
 CREATE TABLE STUDENT_TBL
 (
@@ -27,17 +28,20 @@ STUD_NAME VARCHAR(40) NOT NULL
 CREATE TABLE STUDENT_BACKUP_TBL AS
 SELECT * FROM STUDENT_TBL;
 ```
-## 修改表
+2. 修改表
+
 ```SQL
 ALTER TABLE STUDENT_TBL MODIFY
 STUD_ID CHAR(10);
 ```
-## 删除表
+3. 删除表
+
 ```SQL
 DROP TABLE STUDENT_TBL;
 ```
 # 完整性约束
-## 主键约束
+1. 主键约束
+
 ```SQL
 CREATE TABLE STUDENT_TBL
 (
@@ -55,7 +59,8 @@ PRIMARY KEY(STUD_ID, STUD_NAME)
 ALTER TABLE STUDENT_TBL
 ADD CONSTRAINT STUD_PK PRIMARY KEY(STUD_ID, STUD_NAME);
 ```
-## 唯一性约束
+2. 唯一性约束
+
 ```SQL
 CREATE TABLE STUDENT_TBL
 (
@@ -63,7 +68,8 @@ STUD_ID CHAR(9) NOT NULL PRIMAARY KEY,
 STUD_NAME VARCHAR(40) NOT NULL UNIQUE
 );
 ```
-## 外键约束
+3. 外键约束
+
 ```SQL
 CREATE TABLE STUDENT_SCORE_TBL
 (
@@ -72,8 +78,10 @@ ENGLISH INT,
 CONSTRAINT STUD_ID_FK FOREIGN KEY (STUD_ID) REFERENCES STUDENT_TBL (STUD_ID)
 );
 ```
-## NOT NULL约束
-## 检查约束
+3. NOT NULL约束
+
+4. 检查约束
+
 ```SQL
 CREATE TABLE STUDENT_SCORE_TBL
 (
@@ -82,54 +90,71 @@ ENGLISH INT,
 CONSTRAINT ENGLISH_CHK CHECK ( 0 <= ENGLISH <= 100)
 ); 
 ```
-## 去除约束
+5. 去除约束
+
 ```SQL
 ALTER TABLE  STUDENT_SCORE_TBL DROP CONSTRAINT ENGLISH_CHK;
 ```
 # DML
-## 插入行
+1. 插入行
+
 ```SQL
 INSERT INTO STUDENT_TBL
 VALUES('001', 'LEE');
 ```
-## 插入数据到指定列
+2. 插入数据到指定列
+
 ```SQL
 INSERT INTO STUDENT_SCORE_TBL(STUD_ID,ENGLISH)
 VALUES('001', 90);
 ```
-## 从另一个表插入数据
+3. 从另一个表插入数据
+
 ```SQL
 INSERT INTO STUDENT_BACKUP_TBL(STUD_ID,STUD_NAME)
 SELECT * FROM STUDENT_TBL;
 ```
-## 插入NULL值
+4. 插入NULL值
+
 ```SQL
 INSERT INTO STUDENT_SCORE_TBL
 ('001',NULL);
 ```
-## 更新现有数据
+5. 更新现有数据
+
 ```SQL
 UPDATE STUDENT_SCORE_TBL
 SET SCORE = 90
 WHERE STUD_ID = '001';
 ```
-## 删除数据
+5. 删除数据
+
 ```SQL
 DELETE FROM STUDENT_TBL
 WHERE STUD_ID = '001'
 ```
 
 # 事务控制
-## COMMIT
-提交上一次COMMIT或ROllBACK之后的全部事务
-## ROLLBACK
-撤销上一次COMMIT或ROllBACK之后的全部事务
-## SAVEPOINT
-保存点是事务过程中的一个逻辑点，我们可以将事务回退到这个点，而不必撤回全部事务。
-## ROLLBACK TO SAVEPOINT
-将事务撤回保存点
-## RELEASE SAVEPOINT
-删除创建的保存点
+1. COMMIT
+
+   提交上一次COMMIT或ROllBACK之后的全部事务
+
+2. ROLLBACK
+
+   撤销上一次COMMIT或ROllBACK之后的全部事务
+
+3. SAVEPOINT
+
+   保存点是事务过程中的一个逻辑点，我们可以将事务回退到这个点，而不必撤回全部事务。
+
+4. ROLLBACK TO SAVEPOINT
+
+   将事务撤回保存点
+
+5. RELEASE SAVEPOINT
+
+   删除创建的保存点
+
 ```SQL
 DELETE FROM STUDENT_TBL
 WHERE STUD_ID = '003'
@@ -142,65 +167,79 @@ WHERE STUD_ID = '001'
 ROLLBACK TO SP2
 RELEASE SP1
 ```
-## SET TRANSACTION
-用于初始化数据库事务，指定事务的特性。
+6. SET TRANSACTION
+
+   用于初始化数据库事务，指定事务的特性。
 
 # DQL
-## 删除重复记录 
-DISTINCT用于去除结果中的重复记录。
+1. 删除重复记录 
+
+   DISTINCT用于去除结果中的重复记录。
+
 ```SQL
 SELECT DISTINCT(STUD_NAME) FROM STUDENT_TBL
 ```
-## 输出结果排序
-ASC/DESC: 生序/降序
+2. 输出结果排序
+
+   ASC/DESC: 生序/降序
+
 ```SQL
 SELECT * FROM STUDENT_SCORE_TBL
 WHERE ENGLISH >= 60
 ORDER BY ENGLISH DESC;
 ```
-## 输出结果分组
+3. 输出结果分组
+
 ```SQL
 SELECT * FROM STUDENT_SCORE_TBL
 WHERE ENGLISH >= 60
 GROUP BY ENGLISH;
 ```
-## 统计表里的记录数量
+4. 统计表里的记录数量
+
 ```SQL
 SELECT COUNT(*) FROM STUDENT_SCORE_TBL
 WHERE ENGLISH >= 60;
 ```
-## 使用字段别名
+5. 使用字段别名
+
 ```SQL
 SELECT STUD_NAME NAME FROM STUDENT_TBL;
 ```
 
 # 逻辑操作符
-## IS NULL
+1. IS NULL
+
 ```SQL
 SELECT COUNT(*) FROM STUDENT_SCORE_TBL
 WHERE ENGLISH IS NULL;
 ```
-## BETWEEN
+2. BETWEEN
+
 ```SQL
 SELECT COUNT(*) FROM STUDENT_SCORE_TBL
 WHERE ENGLISH BETWEEN 60 AND 80;
 ```
-## IN 
+3. IN 
+
 ```SQL
 SELECT COUNT(*) FROM STUDENT_SCORE_TBL
 WHERE STUD_ID IN ('001','002');
 ```
-## LIKE
-利用通配符把一个值与类似的值做比较，通配符有：
+4. LIKE
 
-%： 代表零个，一个，或多个字符
+   利用通配符把一个值与类似的值做比较，通配符有：
 
-_： 代表一个数字或一个字符
+   %： 代表零个，一个，或多个字符
+
+   _： 代表一个数字或一个字符
+
 ```SQL
 SELECT * FROM STUDENT_SCORE_TBL
 WHERE STUD_ID LIKE '00_'
 ```
-## EXISTS
+5. EXISTS
+
 ```SQL
 SELECT STUD_ID FROM STUDENT_SCORE_TBL
 WHERE EXISTS
@@ -209,9 +248,10 @@ SELECT * FROM STUDENT_SCORE_TBL
 WHERE ENGLISH >= 60
 );
 ```
-## UNIQUE
+6. UNIQUE
 
-## ALL / SOME(ANY)
+7. ALL / SOME(ANY)
+
 ```SQL
 SELECT STUD_ID FROM STUDENT_SCORE_TBL
 WHERE ENGLISH > ALL
@@ -220,8 +260,9 @@ SELECT * FROM STUDENT_SCORE_TBL
 WHERE ENGLISH BETWEEN 50 AND 70
 );
 ```
-## AND / OR
-## NOT求反操作符
+8. AND / OR
+
+9. NOT求反操作符
 
 # 汇总函数
 1. COUNT
