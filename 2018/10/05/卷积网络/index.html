@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>标签 | 小芳的博客</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="标签 | 小芳的博客">
+  <title>卷积网络 | 小芳的博客</title>
+  <meta name="keywords" content=" 卷积 ">
+  <meta name="description" content="卷积网络 | 小芳的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="这是小芳的博客">
 <meta property="og:type" content="website">
@@ -326,24 +326,36 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-卷积网络" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">标签</h1>
+        <h1 class="article-title">卷积网络</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+            <a href="javascript:" data-rel="深度学习">深度学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">卷积</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-06 16:16:22'>2018-09-06 16:15</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-08 11:36:37'>2018-10-05 17:05</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:323</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -362,7 +374,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#卷积"><span class="toc-text">卷积</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#池化"><span class="toc-text">池化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#卷积类型"><span class="toc-text">卷积类型</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -377,13 +389,49 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h1><p><strong>m大小的输入，n大小的输出，k大小的核。</strong></p>
+<ol>
+<li><p>稀疏交互</p>
+<p><strong>实现：</strong>核大小远小于输入大小。</p>
+<p><strong>作用：</strong>减少模型的存储需求，提高统计效率。传统算法需要    $m\times n$个参数并且时间复杂度为$O(m\times n)$；稀疏交互只需要$k\times n$个参数及$O(k\times n)$的时间复杂度。</p>
+</li>
+<li><p>参数共享</p>
+<p><strong>实现：</strong>传统神经网络中，计算一层输出时，每一个元素的权重矩阵只会被使用到一次。在卷积神经网络中，用于一个输入的权重矩阵也会被用于其他输入。</p>
+<p><strong>作用：</strong>只需学习一个参数集合，而不是对于每一个位置都需要学习一个单独的参数集合，降低存储需求为$k$，但是不改变前向传播的时间复杂度（$O(k\times n )$）。参数共享使得神经网络具有平移等变的性质。</p>
+</li>
+<li><p>等变表示</p>
+<p>图像先做变化再卷积还是先卷积再变化，输出的结果一样。</p>
+</li>
+</ol>
+<h1 id="池化"><a href="#池化" class="headerlink" title="池化"></a>池化</h1><p>池化可以使输入的表示具有平移不变性。</p>
+<h1 id="卷积类型"><a href="#卷积类型" class="headerlink" title="卷积类型"></a>卷积类型</h1><ol>
+<li><p>标准卷积</p>
+<p>同一层每个节点共享一个核。</p>
+</li>
+<li><p>平铺卷积</p>
+</li>
+<li><p>局部链接</p>
+</li>
+</ol>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
 </article>
 
 
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>卷积网络</p>
+    <p><span>文章字数:</span><span class="post-count">323</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="xiaofang">xiaofang</a></p>
+    <p><span>发布时间:</span>2018-10-05, 17:05:06</p>
+    <p><span>最后更新:</span>2018-10-08, 11:36:37</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/10/05/卷积网络/" title="卷积网络">http://yoursite.com/2018/10/05/卷积网络/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
