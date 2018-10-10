@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>计算机网络 | 小芳的博客</title>
-  <meta name="keywords" content=" 网络 ">
-  <meta name="description" content="计算机网络 | 小芳的博客">
+  <title>排序算法 | 小芳的博客</title>
+  <meta name="keywords" content=" 排序 ">
+  <meta name="description" content="排序算法 | 小芳的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="这是小芳的博客">
 <meta property="og:type" content="website">
@@ -338,9 +338,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-计算机网络" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-排序算法" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">计算机网络</h1>
+        <h1 class="article-title">排序算法</h1>
     
     <div class="article-meta">
         
@@ -348,26 +348,26 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="计算机基础">计算机基础</a>
+            <a href="javascript:" data-rel="数据结构">数据结构</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">网络</a>
+            <a href="javascript:" class="color3">排序</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-04 17:03:28'>2018-09-30 15:03</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-10 15:23:22'>2018-10-10 15:22</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:1.2k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -386,7 +386,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#排序算法对比"><span class="toc-text">排序算法对比</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础排序"><span class="toc-text">基础排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#堆排序"><span class="toc-text">堆排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择排序"><span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入排序"><span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#希尔排序"><span class="toc-text">希尔排序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#归并排序"><span class="toc-text">归并排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#快速排序"><span class="toc-text">快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序"><span class="toc-text">冒泡排序</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -401,7 +401,288 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="排序算法对比"><a href="#排序算法对比" class="headerlink" title="排序算法对比"></a>排序算法对比</h1><table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:center">时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">归并排序</td>
+<td style="text-align:center">nlogn</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">堆排序</td>
+<td style="text-align:center">nlogn</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">快速排序</td>
+<td style="text-align:center">nlogn</td>
+<td style="text-align:center">logn</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">希尔排序</td>
+<td style="text-align:center">n^1.3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">插入排序</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">冒泡排序</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:right">选择排序</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+</tbody>
+</table>
+<h1 id="基础排序"><a href="#基础排序" class="headerlink" title="基础排序"></a>基础排序</h1><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>大顶堆要求父节点大于等于其2个子节点，小顶堆要求父节点小于等于其2个子节点。</p>
+<pre><code class="python">import numpy as np
+
+
+def heapfix(arr, heapsize, index):
+    root = index
+    left = 2 * index
+    right = 2 * index + 1
+    if left &lt; heapsize and arr[left-1] &lt; arr[root-1]:
+        root = left
+    if right &lt; heapsize and arr[right-1] &lt; arr[root-1]:
+        root = right
+    if root != index:
+        arr[index-1], arr[root-1] = arr[root-1], arr[index-1]
+        heapfix(arr, heapsize, root)
+
+
+def buildheap(arr, heapsize):
+    index = heapsize/2
+    while index &gt; 0:
+        heapfix(arr, heapsize,index)
+        index -= 1
+
+
+def heapsort(arr):
+    heapsize = len(arr)
+    buildheap(arr, heapsize)
+    for i in range(heapsize):
+        arr[0],arr[heapsize-1] = arr[heapsize-1], arr[0]
+        heapsize -= 1
+        heapfix(arr, heapsize,1)
+
+
+if __name__ == &quot;__main__&quot;:
+    array = list(np.random.randint(0, 100, 10))
+    heapsort(array)
+    print array
+</code></pre>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><pre><code class="python"># -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+选择排序：
+1.从左至右遍历数组，找到最小的元素与第一个做交换；
+2.在剩下的元素中继续从左至右遍历，并找出最小的与第二个元素做交换；
+3.反复。
+&quot;&quot;&quot;
+import numpy as np
+
+
+def select_sort(array):
+    for i in range(len(array)):
+        # tmp = array[i]
+        min = array[i]
+        min_index = i
+        for j in range(i, len(array)):
+            if array[j] &lt; min:
+                min = array[j]
+                min_index = j
+        array[min_index] = array[i]
+        array[i] = min
+    return array
+
+
+if __name__ == &#39;__main__&#39;:
+    arr = np.random.randint(0, 100, 10)
+    print &#39;排序前：&#39;, arr
+    arr_sort = select_sort(arr)
+    print &#39;排序后：&#39;, arr_sort
+
+</code></pre>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><pre><code class="python"># -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+插入排序：
+1.第一个元素认为已经排好序；
+2.取下一个元素，和前面已经排好序的元素按从后前向的顺序进行比较，如果比前面的数小，就交换；如果比前面的数大，就停止；
+3.重复第二步直到排序完成。
+&quot;&quot;&quot;
+import numpy as np
+
+
+def insert_sort(arr):
+    for i in range(1, len(arr)):
+        for j in range(i, 0, -1):
+            if arr[j-1] &lt;= arr[j]:
+                break
+            else:
+                tmp = arr[j]
+                arr[j] = arr[j-1]
+                arr[j-1] = tmp
+    return arr
+
+
+if __name__ == &#39;__main__&#39;:
+    array = np.random.randint(0, 100, 10)
+    print &#39;排序前：&#39;, array
+    arr_sort = insert_sort(array)
+    print &#39;排序后：&#39;, arr_sort
+</code></pre>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><pre><code class="python"># -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+希尔排序：
+1.设置步长d，将插入算法每次比较时前进的步长改为d;
+2.减小d直到为1，重复第一步
+&quot;&quot;&quot;
+import numpy as np
+
+
+def shell_sort(arr):
+    d = len(arr)/2
+    while d &gt;= 1:
+        for i in range(d, len(arr)):
+            for j in range(i, 0, -d):
+                if arr[j] &gt; arr[j-d]:
+                    break
+                else:
+                    tmp = arr[j]
+                    arr[j] = arr[j-d]
+                    arr[j-d] = tmp
+        d = d/2
+    return arr
+
+
+if __name__ == &#39;__main__&#39;:
+    array = np.random.randint(0, 100, 10)
+    print &#39;排序前：&#39;, array
+    arr_sort = shell_sort(array)
+    print &#39;排序后：&#39;, arr_sort
+
+</code></pre>
+<h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><pre><code class="python"># -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+归并排序：
+将序列不断的分为两个部分，直到每一部分只包含一个元素，进行归并
+&quot;&quot;&quot;
+import numpy as np
+
+
+def merge_sort(arr):
+    sort(arr, 0, len(arr)-1)
+    return arr
+
+
+def sort(arr, low, high):
+    mid = (low + high) / 2
+    if high &gt; low:
+        sort(arr, low, mid)
+        sort(arr, mid + 1, high)
+        merge(arr, low, mid, high)
+    else:
+        return
+
+
+def merge(arr, low, mid, high):
+    tmp = list(arr[low:high+1])
+    i = low
+    j = mid+1
+    for k in range(low, high+1):
+        if i &gt; mid:
+            arr[k] = tmp[j-low]
+            j += 1
+        elif j &gt; high:
+            arr[k] = tmp[i-low]
+            i += 1
+        elif tmp[i-low] &lt; tmp[j-low]:
+            arr[k] = tmp[i-low]
+            i += 1
+        else:
+            arr[k] = tmp[j - low]
+            j += 1
+
+
+if __name__ == &#39;__main__&#39;:
+    array = np.random.randint(0, 100, 10)
+    print &#39;排序前：&#39;, array
+    arr_sort = merge_sort(array)
+    print &#39;排序后：&#39;, arr_sort
+
+</code></pre>
+<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><pre><code class="python"># -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+快速排序：
+1.选一个中轴数；
+2.i，j分别从左向右、从右向左扫描，遇到比中轴数小的就放左边，大的就放右边；
+3.对中轴数左右两边的元素继续1.2步骤，直到排序完成。
+&quot;&quot;&quot;
+import numpy as np
+
+
+def quick_sort(arr):
+    sort(arr, 0, len(arr)-1)
+    return arr
+
+
+def sort(arr, low, high):
+    if low &gt;= high:
+        return arr
+    else:
+        mid = arr[low]
+        i = low
+        j = high
+        while j &gt;= i:
+            if arr[i] &gt; mid &gt; arr[j]:
+                tmp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = tmp
+            if arr[i] &lt;= mid:
+                i += 1
+            if arr[j] &gt;= mid:
+                j -= 1
+        arr[low] = arr[j]
+        arr[j] = mid
+        sort(arr, low, j-1)
+        sort(arr, i, high)
+    return arr
+
+
+if __name__ == &#39;__main__&#39;:
+    array = np.random.randint(0, 100, 10)
+    print &#39;排序前：&#39;, array
+    arr_sort = quick_sort(array)
+    print &#39;排序后：&#39;, arr_sort
+</code></pre>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><ol>
+<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个</li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ol>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -410,12 +691,12 @@
 
 
 <div class="article_copyright">
-    <p><span>文章标题:</span>计算机网络</p>
-    <p><span>文章字数:</span><span class="post-count">0</span></p>
+    <p><span>文章标题:</span>排序算法</p>
+    <p><span>文章字数:</span><span class="post-count">1.2k</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="xiaofang">xiaofang</a></p>
-    <p><span>发布时间:</span>2018-09-30, 15:03:14</p>
-    <p><span>最后更新:</span>2018-10-04, 17:03:28</p>
-    <span>原始链接:</span><a class="post-url" href="/2018/09/30/计算机网络/" title="计算机网络">http://yoursite.com/2018/09/30/计算机网络/</a>
+    <p><span>发布时间:</span>2018-10-10, 15:22:01</p>
+    <p><span>最后更新:</span>2018-10-10, 15:23:22</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/10/10/排序算法/" title="排序算法">http://yoursite.com/2018/10/10/排序算法/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
