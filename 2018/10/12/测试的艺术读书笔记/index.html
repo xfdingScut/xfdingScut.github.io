@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>标签 | 小芳的博客</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="标签 | 小芳的博客">
+  <title>测试的艺术读书笔记 | 小芳的博客</title>
+  <meta name="keywords" content=" 测试 ">
+  <meta name="description" content="测试的艺术读书笔记 | 小芳的博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="这是小芳的博客">
 <meta property="og:type" content="website">
@@ -348,24 +348,36 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-测试的艺术读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">标签</h1>
+        <h1 class="article-title">测试的艺术读书笔记</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+            <a href="javascript:" data-rel="软件测试">软件测试</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">测试</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-09-06 16:16:22'>2018-09-06 16:15</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-12 17:38:50'>2018-10-12 11:06</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:0</span>
+        <span>字数:1.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -384,7 +396,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#黑盒测试"><span class="toc-text">黑盒测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#白盒测试"><span class="toc-text">白盒测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑覆盖测试"><span class="toc-text">逻辑覆盖测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回归测试"><span class="toc-text">回归测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人工测试"><span class="toc-text">人工测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码检查与走查"><span class="toc-text">代码检查与走查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#桌面检查"><span class="toc-text">桌面检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同行评分"><span class="toc-text">同行评分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设计测试用例"><span class="toc-text">设计测试用例</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -399,13 +411,112 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>测试是为发现错误而执行程序的过程。</p>
+<h2 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h2><p>黑盒测试又称为<strong>数据驱动的测试或者输入/输出驱动测试</strong>。</p>
+<p>判断标准：“<strong>穷举输入测试</strong>”，将所有可能的输入条件都作为条件用例。<strong>（不可行）</strong></p>
+<ol>
+<li><p>等价类划分</p>
+<ul>
+<li><p>确定等价类（有效等价类，无效等价类）</p>
+<p>选取每一个输入条件并将其划分为两个或更多的组。</p>
+</li>
+<li><p>生成测试用例</p>
+<p>为每个等价类设置一个不同的编号。编写新的测试用，尽可能多的去覆盖尚未被包含的有效等价类。</p>
+<p>编写新的用例，覆盖一个且仅一个尚未被覆盖的无效等价类。</p>
+</li>
+</ul>
+</li>
+<li><p>边界值分析</p>
+</li>
+<li><p>因果图分析</p>
+<p>用一个系统的方法选出一个高效的测试用例集。</p>
+</li>
+<li><p>错误猜测</p>
+<p>自己猜：）</p>
+</li>
+</ol>
+<h2 id="白盒测试"><a href="#白盒测试" class="headerlink" title="白盒测试"></a>白盒测试</h2><p>白盒测试又称为逻辑驱动的测试，允许检查程序的内部结构，从中获取测试数据。</p>
+<p>判断标准：<strong>穷举路径测试</strong>（完全的测试），（无法解决程序设计规范的错误/缺少路径的错误/数据敏感的错误）<strong>（不可行）</strong></p>
+<h3 id="逻辑覆盖测试"><a href="#逻辑覆盖测试" class="headerlink" title="逻辑覆盖测试"></a>逻辑覆盖测试</h3><ol>
+<li><p>语句覆盖</p>
+<p>确保每条语句至少被执行一次。</p>
+</li>
+<li><p>判定覆盖<strong>（每个判断真假各一次）</strong></p>
+<p>判断覆盖或者分支覆盖是比较强一些逻辑覆盖准则。判定覆盖通常可以满足语句覆盖（三种例外：程序中不存在判断、程序或子程序/方法有多重入口点、在ON-unit单元里的语句）。</p>
+</li>
+<li><p>条件覆盖<strong>（判定的条件所有可能的取值各一次）</strong></p>
+<p>条件覆盖略强于判断覆盖。</p>
+</li>
+<li><p>判定/条件覆盖<strong>（判定真假各一次，条件取值各一次）</strong></p>
+<p>同时满足判定覆盖和条件覆盖。</p>
+</li>
+<li><p>多重条件覆盖</p>
+<p>所有条件可能的取值组合一遍。</p>
+</li>
+<li><p>路径覆盖<strong>（不可行）</strong></p>
+<p>走完所有路径。</p>
+</li>
+</ol>
+<h2 id="回归测试"><a href="#回归测试" class="headerlink" title="回归测试"></a>回归测试</h2><p>保留测试用例，当程序其他部件发生更改后重新执行。</p>
+<h2 id="人工测试"><a href="#人工测试" class="headerlink" title="人工测试"></a>人工测试</h2><h3 id="代码检查与走查"><a href="#代码检查与走查" class="headerlink" title="代码检查与走查"></a>代码检查与走查</h3><p>在程序开始编码之后，基于计算机的测试开始之前使用。</p>
+<ol>
+<li><p>代码检查</p>
+<p><strong>代码检查</strong>就是以组为单位阅读代码，是一系列规程和错误检查技术的集合。一个代码检查小组通常由四人组成，其中一人发挥着协调作用。（协调人应该是个称职的程序员，但不是该程序的编码人员，不需要对程序的细节了解的很清楚。协调人职责：为代码检查分发材料，安排进程；主导作用；记录所有发现的错误；确保错误随后得到改正。）小组其他人为代码的编码人、程序设计人员、测试专家。</p>
+<p>检查过程：</p>
+<ul>
+<li>程序编码人逐条语句讲述程序逻辑结构</li>
+<li>对着历来常见的编码错误列表分析程序</li>
+</ul>
+</li>
+<li><p>代码走查</p>
+<p>代码走查也是以组为单位阅读代码，由三到五个人（协调人/错误记录人/测试人员），不同于代码检查，走查会将一些书面的测试用例沿程序的逻辑结构走一遍，提供启动代码走查和质疑程序员逻辑思路及其设想的手段。</p>
+</li>
+</ol>
+<ul>
+<li><p><strong>用于代码检查的错误列表</strong></p>
+<ol>
+<li><p>数据引用错误</p>
+<p>引用空值/数组下标越界/数组下标是否为整数/引用的变量的内存是否分配/变量类型是否正确</p>
+</li>
+<li><p>数据声明错误</p>
+</li>
+<li><p>运算错误</p>
+</li>
+<li><p>比较错误</p>
+</li>
+<li><p>控制流程错误</p>
+</li>
+<li><p>接口错误</p>
+</li>
+<li><p>输入/输出错误</p>
+</li>
+<li><p>其他检查</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="桌面检查"><a href="#桌面检查" class="headerlink" title="桌面检查"></a>桌面检查</h3><p>由单人进行的代码检查或代码走查</p>
+<h3 id="同行评分"><a href="#同行评分" class="headerlink" title="同行评分"></a>同行评分</h3><p>同行评分是一种依旧程序整体质量、可维护性、可扩展性、易用性和清晰性对匿名程序进行评价的技术。</p>
+<h2 id="设计测试用例"><a href="#设计测试用例" class="headerlink" title="设计测试用例"></a>设计测试用例</h2><p>软件测试的最关键问题：在所有可能的测试用例中，哪个子集最有可能发现最多的错误。</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
 </article>
 
 
+
+<div class="article_copyright">
+    <p><span>文章标题:</span>测试的艺术读书笔记</p>
+    <p><span>文章字数:</span><span class="post-count">1.1k</span></p>
+    <p><span>本文作者:</span><a href="javascript:void(0)" title="xiaofang">xiaofang</a></p>
+    <p><span>发布时间:</span>2018-10-12, 11:06:59</p>
+    <p><span>最后更新:</span>2018-10-12, 17:38:50</p>
+    <span>原始链接:</span><a class="post-url" href="/2018/10/12/测试的艺术读书笔记/" title="测试的艺术读书笔记">http://yoursite.com/2018/10/12/测试的艺术读书笔记/</a>
+    <p>
+        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
 
 
 
