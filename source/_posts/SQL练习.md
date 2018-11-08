@@ -204,19 +204,19 @@ insert into Score values('07' , '03' , 98);
 
 10. **查询学过编号为"01"但是没有学过编号为"02"的课程的同学的信息（逻辑操作符）**
 
-    ```sql
-    select student.* 
-    from student 
-    where student.s_id in(
-    	select score.s_id
-        from score
-        where score.c_id ='01' and score.s_id not in(
-    		select score.s_id
-            from score
-            where score.c_id = '02'
-        )
-    );
-    ```
+   ```sql
+   select student.* 
+   from student 
+   where student.s_id in(
+   	select score.s_id
+       from score
+       where score.c_id ='01' and score.s_id not in(
+   		select score.s_id
+           from score
+           where score.c_id = '02'
+       )
+   );
+   ```
 
 11. **查询没有学全所有课程的同学的信息（分组函数和汇总函数）**
 
@@ -248,53 +248,6 @@ insert into Score values('07' , '03' , 98);
     );
     ```
 
-13. **查询和"01"号的同学学习的课程完全相同的其他同学的信息 **
-
-    ```sql
-    
-    ```
-
-14. **查询没学过"张三"老师讲授的任一门课程的学生姓名** 
-
-    ```sql
-    
-    ```
-
-15. **查询两门及其以上不及格课程的同学的学号，姓名及其平均成绩** 
-
-    ```sql
-    
-    ```
-
-16. **检索"01"课程分数小于60，按分数降序排列的学生信息**
-
-    ```sql
-    
-    ```
-
-17. **按平均成绩从高到低显示所有学生的所有课程的成绩以及平均成绩**
-
-    ```sql
-    
-    ```
-
-18. **查询各科成绩最高分、最低分和平均分：以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率及格为>=60，中等为：70-80，优良为：80-90，优秀为：>=90**
-
-    ```sql
-    
-    ```
-
-19. **按各科成绩进行排序，并显示排名(实现不完全)**
-
-    ```sql
-    
-    ```
-
-20. **查询学生的总成绩并进行排名**
-
-    ```sql
-    
-    ```
 
 # 测试数据库附图
 
